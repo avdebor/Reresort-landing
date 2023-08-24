@@ -45,30 +45,3 @@ tl.from(".heading-text", { opacity: 0, delay: 0.2, y: 30 });
 tl.from(".classified", { opacity: 0, delay: 0.1 });
 tl.from(".button-anim", { opacity: 0, delay: 0.1, y: 30 });
 tl.add(btnAnim);
-
-//
-// Select the blocks
-const blocks = document.querySelectorAll(".body-blocks");
-
-// Create a timeline for the animations
-const timeline = gsap.timeline({ paused: true });
-
-// Loop through the blocks and add animations to the timeline
-blocks.forEach((block, index) => {
-  timeline.fromTo(
-    block,
-    { opacity: 0, x: -20 },
-    { opacity: 1, x: 0, duration: 0.5 },
-    index * 0.2
-  );
-});
-
-// Detect when the user scrolls to the "elements" section
-const elementsSection = document.querySelector(".elements");
-const elementsSectionOffset = elementsSection.offsetTop;
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY >= elementsSectionOffset) {
-    timeline.play();
-  }
-});
