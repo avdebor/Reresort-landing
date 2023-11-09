@@ -1,3 +1,3 @@
 # Reresort-landing
 
-demo - https://avdebor.github.io/Reresort-landing/dist/index.html
+demo - [click](https://avdebor.github.io/Reresort-landing/dist/index.html)
